@@ -1,6 +1,6 @@
 # angular-chart2.js
 
-Migrated to Chart2js
+Chart2js support from 0.9.0 version
 
 Beautiful, reactive, responsive charts for Angular.JS using [Chart.js](http://www.chartjs.org/). 
 
