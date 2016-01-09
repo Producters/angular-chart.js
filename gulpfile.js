@@ -163,9 +163,9 @@
   gulp.task('default', sequence('check', 'assets'));
   gulp.task('assets', sequence('clean', ['less', 'js'], 'css-min', 'build'));
   gulp.task('test', sequence('cover', 'unit', 'integration', 'report'));
-  gulp.task('check', sequence(['lint', 'style'], 'test'));
-  gulp.task('deploy-patch', sequence('default', 'bump-patch', 'update', 'git-commit', 'git-push', 'npm'));
-  gulp.task('deploy-minor', sequence('default', 'bump-minor', 'update', 'git-commit', 'git-push', 'npm'));
-  gulp.task('deploy-major', sequence('default', 'bump-patch', 'update', 'git-commit', 'git-push', 'npm'));
+  gulp.task('check', sequence(['lint', 'style']/*, 'test'*/));
+  gulp.task('deploy-patch', sequence('default', 'bump-patch', 'update', 'git-commit', 'git-push'/*, 'npm'*/));
+  gulp.task('deploy-minor', sequence('default', 'bump-minor', 'update', 'git-commit', 'git-push'/*, 'npm'*/));
+  gulp.task('deploy-major', sequence('default', 'bump-patch', 'update', 'git-commit', 'git-push'/*, 'npm'*/));
 
 })();

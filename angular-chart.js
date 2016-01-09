@@ -280,16 +280,16 @@
       };
     }
 
-    function getData (labels, data, colours) {
-      return labels.map(function (label, i) {
-        return angular.extend({}, colours[i], {
-          label: label,
-          value: data[i],
-          color: colours[i].strokeColor,
-          highlight: colours[i].pointHighlightStroke
-        });
-      });
-    }
+    //function getData (labels, data, colours) {
+    //  return labels.map(function (label, i) {
+    //    return angular.extend({}, colours[i], {
+    //      label: label,
+    //      value: data[i],
+    //      color: colours[i].strokeColor,
+    //      highlight: colours[i].pointHighlightStroke
+    //    });
+    //  });
+    //}
 
     function setLegend (elem, chart) {
       var $parent = elem.parent(),
@@ -300,13 +300,7 @@
     }
 
     function updateChart (chart, values, scope, elem) {
-        //console.log('chart.data.datasets', chart.data.datasets);
-      return;
       chart.data.datasets.forEach(function (dataset, i) {
-        //debugger;
-        //dataset.data.forEach(function (dataItem, j) {
-        //  dataItem.value = values[i][j];
-        //});
         for (var j = 0; j < values[i].length; j++) {
           //console.log(values[i][j]);
           dataset.data[j] = values[i][j];
